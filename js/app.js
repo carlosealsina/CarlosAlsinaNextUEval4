@@ -1,3 +1,14 @@
+var operandoa;
+var operandob;
+var operacion;
+var resultado;
+var temp1=0;
+var temp2=0;
+var cont2=0;
+var cont3=0;
+var numero1=0;
+var numero2=0;
+
 function Calculadora(){
 	//variables
 	var uno = document.getElementById('1');
@@ -142,6 +153,108 @@ function Calculadora(){
 				display.textContent = display.textContent + "0";
 			}
 		}
+		}
+
+		//punto
+		var cont=1;
+		punto.onclick =function(e){
+			if (display.textContent == "0") {
+				display.textContent = "0.";
+				cont=cont+2;
+			}
+			if (cont<=1) {
+				display.textContent = display.textContent + ".";
+				cont = cont+1;
+			}else{
+				display.textContent = display.textContent;
+			}
+			}
+
+		//signo
+		signo.onclick =function(e){
+			if (display.textContent == "-") {
+				display.textContent = display.textContent;
+			}
+			display.textContent =  display.textContent * ("-1");
+			}
+
+		//limpiar
+		function limpiar(){
+			display.textContent = "";
+		}
+
+		//On
+		on.onclick =function(e){
+			display.textContent = "0";
+			resultado=0;
+			operacion="";
+			numero1=0;
+			numero2=0;
+			operandoa=0;
+			operandob=0;
+			cont=0;
+			cont3=0;
+		}
+
+		//Operaciones básicas
+		//Suma
+		suma.onclick = function(e){
+				operandoa = display.textContent;
+		  	operacion = "+";
+				cont3=0;
+				numero1 = operandoa;
+		  	limpiar();
+			}
+		//Resta
+		resta.onclick = function(e){
+				operandoa = display.textContent;
+				operacion = "-";
+				cont3=0;
+				limpiar();
+		}
+		//Multipilación
+		multiplicacion.onclick = function(e){
+				operandoa = display.textContent;
+				operacion = "*";
+				cont3=0;
+				limpiar();
+		}
+		//División
+		division.onclick = function(e){
+				operandoa = display.textContent;
+				operacion = "/";
+				cont3=0;
+				limpiar();
+		}
+
+		//igual
+		igual.onclick = function(e){
+			numero2=display.textContent;
+			if (cont3==0) {
+				numero1=operandoa;
+				temp1=numero2;
+				cont3=cont3+1;
+			}else {
+				numero1=resultado;
+				numero2=temp1;
+			}
+		//resolver operación
+		  if(operacion == "+"){
+		    resultado = parseFloat(numero1) + parseFloat(numero2);
+		  }
+			if(operacion == "-"){
+		    resultado = parseFloat(numero1) - parseFloat(numero2);
+		  }
+			if(operacion == "*"){
+		    resultado = parseFloat(numero1) * parseFloat(numero2);
+		  }
+			if(operacion == "/"){
+		    resultado = parseFloat(numero1) / parseFloat(numero2);
+		  }
+
+
+
+			display.textContent = resultado;
 		}
 
 
