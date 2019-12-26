@@ -20,6 +20,129 @@ function Calculadora(){
 	var division = document.getElementById('dividido');
 	var igual = document.getElementById('igual');
 
+	//eventos
+	//uno
+	uno.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+			display.textContent = "1";
+	  	}
+	  	else{
+		display.textContent = display.textContent + "1";
+	  	}
+			}
+		}
+	//dos
+	dos.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "2";
+	  	}
+	  	else{
+				display.textContent = display.textContent + "2";
+	  	}
+		}
+		}
+
+	//tres
+	tres.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "3";
+			}
+			else{
+				display.textContent = display.textContent + "3";
+			}
+		}
+		}
+
+	//cuatro
+	cuatro.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "4";
+			}
+			else{
+				display.textContent = display.textContent + "4";
+			}
+		}
+		}
+	//cinco
+	cinco.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "5";
+			}
+			else{
+				display.textContent = display.textContent + "5";
+			}
+		}
+		}
+	//seis
+	seis.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "6";
+			}
+			else{
+				display.textContent = display.textContent + "6";
+			}
+		}
+		}
+	//siete
+	siete.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "7";
+			}
+			else{
+				display.textContent = display.textContent + "7";
+			}
+		}
+		}
+	//ocho
+	ocho.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "8";
+			}
+			else{
+				display.textContent = display.textContent + "8";
+			}
+		}
+		}
+	//nueve
+	nueve.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "9";
+			}
+			else{
+				display.textContent = display.textContent + "9";
+			}
+		}
+		}
+	//cero
+	cero.onclick =function(e){
+		if (display.textContent.length>=8) {
+		}else{
+			if (display.textContent == "0") {
+				display.textContent = "0";
+			}
+			else{
+				display.textContent = display.textContent + "0";
+			}
+		}
+		}
 
 
 	//efecto botones
